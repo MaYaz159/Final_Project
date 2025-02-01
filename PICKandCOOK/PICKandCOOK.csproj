@@ -67,39 +67,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="contact.html" />
-    <Content Include="gallery.html" />
-    <Content Include="HOME.html" />
-    <Content Include="img\1.png" />
-    <Content Include="img\10.png" />
-    <Content Include="img\11.png" />
-    <Content Include="img\12.png" />
-    <Content Include="img\13.png" />
-    <Content Include="img\14.png" />
-    <Content Include="img\15.png" />
-    <Content Include="img\16.png" />
-    <Content Include="img\2.png" />
-    <Content Include="img\3.png" />
-    <Content Include="img\4.png" />
-    <Content Include="img\5.png" />
-    <Content Include="img\6.png" />
-    <Content Include="img\7.png" />
-    <Content Include="img\8.png" />
-    <Content Include="img\9.png" />
-    <Content Include="img\Bg 1-fotor-20250129231418.png" />
+    <Content Include="HOME 2.html" />
+    <Content Include="HOME_page.html" />
     <Content Include="img\Bg 1.jpg" />
-    <Content Include="img\flags%402x-1.png" />
-    <Content Include="img\flags%402x.png" />
-    <Content Include="img\flags-1.png" />
-    <Content Include="img\flags.png" />
+    <Content Include="img\bi.svg" />
+    <Content Include="img\cfs.svg" />
+    <Content Include="img\cfsr.svg" />
+    <Content Include="img\ci.svg" />
+    <Content Include="img\f.svg" />
+    <Content Include="img\ff.png" />
+    <Content Include="img\fs.svg" />
     <Content Include="img\img.png" />
-    <Content Include="img\large 2.mp4" />
-    <Content Include="img\large 3.mp4" />
     <Content Include="img\large 4.mp4" />
     <Content Include="img\large.mp4" />
     <Content Include="img\logo.ico" />
     <Content Include="img\logo2.ico" />
-    <Content Include="img\scr.png" />
+    <Content Include="img\t.png" />
+    <Content Include="img\tbi.svg" />
+    <Content Include="img\tci.svg" />
     <Content Include="js\dist\banner.bundle-1.js" />
     <Content Include="js\dist\banner.bundle.js" />
     <Content Include="js\dist\published_site.bundle-1.js" />
@@ -120,24 +105,34 @@
     <Content Include="js\dist\published_site_section_style_gallery_shared.bundle.css" />
     <Content Include="js\dist\published_site_section_style_header_shared.bundle-1.css" />
     <Content Include="js\dist\published_site_section_style_header_shared.bundle.css" />
-    <Content Include="js\dist\site_free_plan.bundle-1.css" />
     <Content Include="js\dist\site_free_plan.bundle.css" />
     <Content Include="js\dist\site_style.bundle-1.css" />
     <Content Include="js\dist\site_style.bundle.css" />
-    <Content Include="p.css" />
-    <Content Include="pza8bhe.css" />
-    <Content Include="recipes.html" />
-    <Content Include="services.html" />
+    <Content Include="style.css" />
     <Content Include="style\intlTelInput-1.css" />
     <Content Include="style\intlTelInput.css" />
+    <Content Include="videos\bg.mp4" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css2" />
-    <Content Include="css2-1" />
+    <Content Include="fonts\BlueberrypiepersonaluseBold-x3AZV.otf" />
+    <Content Include="fonts\Braga-BWzLn.otf" />
+    <Content Include="fonts\BrielleRegular-K7qMo.otf" />
+    <Content Include="fonts\ImperialCelestial-JR5Gm.otf" />
+    <Content Include="fonts\MaytozPersonalUseOnly-6RnEx.otf" />
+    <Content Include="fonts\MercusuarBold-PKa6Z.ttf" />
+    <Content Include="fonts\MercusuarBoldItalic-X3l6Z.ttf" />
+    <Content Include="fonts\QuirkyBayRegular-nRX7O.ttf" />
+    <Content Include="fonts\RanilleNormalRegular-EaZJj.ttf" />
+    <Content Include="fonts\Soley-3zLP6.ttf" />
+    <Content Include="fonts\WsParadoseRegular-1jPAe.ttf" />
+    <Content Include="fonts\Happy Town.otf" />
+    <Content Include="fonts\iImong.ttf" />
+    <Content Include="fonts\Love House.otf" />
+    <Content Include="fonts\SMACK.ttf" />
     <None Include="packages.config" />
     <Content Include="s\archivo\v19\k3k6o8UDI-1M0wlSV9XAw6lQkqWY8Q82sJaRE-NWIDdgffTT0zRp8A.ttf" />
     <Content Include="s\archivo\v19\k3k6o8UDI-1M0wlSV9XAw6lQkqWY8Q82sJaRE-NWIDdgffTTajNp8A.ttf" />
