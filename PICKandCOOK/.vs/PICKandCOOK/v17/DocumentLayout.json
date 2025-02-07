@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -28,25 +28,10 @@
               "RelativeDocumentMoniker": "style.css",
               "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\style.css",
               "RelativeToolTip": "style.css",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADUAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAAAMoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-01T18:16:57.744Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HOME_page.html",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\HOME_page.html",
-              "RelativeDocumentMoniker": "HOME_page.html",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\HOME_page.html",
-              "RelativeToolTip": "HOME_page.html",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAADEAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-02-01T15:04:03.565Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-02T12:49:27.957Z",
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -67,6 +52,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HOME_page.html",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\HOME_page.html",
+              "RelativeDocumentMoniker": "HOME_page.html",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\HOME_page.html",
+              "RelativeToolTip": "HOME_page.html",
+              "ViewState": "AgIAADkAAAAAAAAAAAAmwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-02-01T15:04:03.565Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -70,6 +70,15 @@
     <Content Include="HOME 2.html" />
     <Content Include="HOME_page.html" />
     <Content Include="img\Bg 1.jpg" />
+    <Content Include="img\Bg 2.png" />
+    <Content Include="img\bg.png" />
+    <Content Include="img\bg2.png" />
+    <Content Include="img\bg3.png" />
+    <Content Include="img\bg4.png" />
+    <Content Include="img\bg5.png" />
+    <Content Include="img\bg6.png" />
+    <Content Include="img\bg7.png" />
+    <Content Include="img\bgg.png" />
     <Content Include="img\bi.svg" />
     <Content Include="img\cfs.svg" />
     <Content Include="img\cfsr.svg" />
@@ -82,6 +91,8 @@
     <Content Include="img\large.mp4" />
     <Content Include="img\logo.ico" />
     <Content Include="img\logo2.ico" />
+    <Content Include="img\ns.png" />
+    <Content Include="img\s.png" />
     <Content Include="img\t.png" />
     <Content Include="img\tbi.svg" />
     <Content Include="img\tci.svg" />
@@ -111,6 +122,7 @@
     <Content Include="style.css" />
     <Content Include="style\intlTelInput-1.css" />
     <Content Include="style\intlTelInput.css" />
+    <Content Include="videos\audio.mp3" />
     <Content Include="videos\bg.mp4" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -133,6 +145,13 @@
     <Content Include="fonts\iImong.ttf" />
     <Content Include="fonts\Love House.otf" />
     <Content Include="fonts\SMACK.ttf" />
+    <Content Include="img\bg.webp" />
+    <Content Include="img\bg2.webp" />
+    <Content Include="img\bg3.webp" />
+    <Content Include="img\bg4.webp" />
+    <Content Include="img\bg5.webp" />
+    <Content Include="img\bg6.webp" />
+    <Content Include="img\bg7.webp" />
     <None Include="packages.config" />
     <Content Include="s\archivo\v19\k3k6o8UDI-1M0wlSV9XAw6lQkqWY8Q82sJaRE-NWIDdgffTT0zRp8A.ttf" />
     <Content Include="s\archivo\v19\k3k6o8UDI-1M0wlSV9XAw6lQkqWY8Q82sJaRE-NWIDdgffTTajNp8A.ttf" />
