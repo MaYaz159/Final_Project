@@ -57,3 +57,16 @@ C:\Users\user\OneDrive\Desktop\Project\PICKandCOOK\obj\Debug\PICKandCOOK.csproj.
 C:\Users\user\OneDrive\Desktop\Project\PICKandCOOK\obj\Debug\PICKandC.F67C7420.Up2Date
 C:\Users\user\OneDrive\Desktop\Project\PICKandCOOK\obj\Debug\PICKandCOOK.dll
 C:\Users\user\OneDrive\Desktop\Project\PICKandCOOK\obj\Debug\PICKandCOOK.pdb
+C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\Microsoft.Owin.dll
+C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\Microsoft.Owin.Security.dll
+C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\Newtonsoft.Json.dll
+C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\Owin.dll
+C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\Microsoft.Owin.xml
+C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\Microsoft.Owin.Security.xml
+C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\Newtonsoft.Json.xml
+C:\Users\user\OneDrive\Desktop\Project\PICKandCOOK\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\user\OneDrive\Desktop\Project\PICKandCOOK\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\Facebook.dll
+C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\Facebook.xml

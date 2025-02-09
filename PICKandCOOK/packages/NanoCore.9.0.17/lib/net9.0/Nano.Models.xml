@@ -1,0 +1,735 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nano.Models</name>
+    </assembly>
+    <members>
+        <member name="T:Nano.Models.Attributes.IncludeAttribute">
+            <summary>
+            Include Attribute.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.Attributes.IncludeAttribute.QuerySplittingBehavior">
+            <summary>
+            Query Splitting Behavior.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Attributes.IncludeAttribute.#ctor(Microsoft.EntityFrameworkCore.QuerySplittingBehavior)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="querySplittingBehavior">The <see cref="P:Nano.Models.Attributes.IncludeAttribute.QuerySplittingBehavior"/>.</param>
+        </member>
+        <member name="T:Nano.Models.Attributes.PublishAttribute">
+            <summary>
+            Publish Attribute.
+            Types with this annotation, defines that an event will be published for the entity when it changes.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.Attributes.PublishAttribute.PropertyNames">
+            <summary>
+            Property Names.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Attributes.PublishAttribute.#ctor(System.String[])">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="propertyNames">The property names.</param>
+        </member>
+        <member name="T:Nano.Models.Attributes.SubscribeAttribute">
+            <summary>
+            Subscribe Attribute.
+            Types with this annotation, subscribes to events of the declaring type.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Attributes.SwaggerResponseOnlyAttribute">
+            <summary>
+            Swagger Response Only Attribute.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Attributes.UxExceptionAttribute">
+            <summary>
+            Ux Exception Attribute.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.Attributes.UxExceptionAttribute.Message">
+            <summary>
+            Message.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.Attributes.UxExceptionAttribute.Properties">
+            <summary>
+            Properties.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Attributes.UxExceptionAttribute.#ctor(System.String,System.String[])">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="message">The message to expose.</param>
+            <param name="properties">The properties.</param>
+        </member>
+        <member name="T:Nano.Models.BaseEntity">
+            <inheritdoc />
+        </member>
+        <member name="T:Nano.Models.BaseEntityIdentity`1">
+            <inheritdoc cref="T:Nano.Models.Interfaces.IEntityIdentity`1"/>
+        </member>
+        <member name="P:Nano.Models.BaseEntityIdentity`1.Id">
+            <inheritdoc />
+        </member>
+        <member name="T:Nano.Models.BaseEntityUser`1">
+            <summary>
+            Base Entity User (abstract).
+            </summary>
+        </member>
+        <member name="P:Nano.Models.BaseEntityUser`1.IsDeleted">
+            <inheritdoc />
+        </member>
+        <member name="P:Nano.Models.BaseEntityUser`1.IdentityUserId">
+            <inheritdoc />
+        </member>
+        <member name="P:Nano.Models.BaseEntityUser`1.IdentityUser">
+            <inheritdoc />
+        </member>
+        <member name="T:Nano.Models.Const.HttpContentType">
+            <summary>
+            Http Content Type.
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.HTML">
+            <summary>
+            Html ("text/html").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.XHTML">
+            <summary>
+            Xhtml ("text/xhtml").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.TEXT">
+            <summary>
+            Text ("text/plain").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.CSV">
+            <summary>
+            Csv ("text/csv").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.PNG">
+            <summary>
+            Png ("image/png").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.BMP">
+            <summary>
+            Bmp ("image/bmp").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.JPEG">
+            <summary>
+            Jpeg / Jpg ("image/jpeg").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.GIF">
+            <summary>
+            Gif ("image/gif").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.TIFF">
+            <summary>
+            Tiff ("image/tiff").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.ICON">
+            <summary>
+            Icon ("image/x-icon").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.SVG">
+            <summary>
+            Svg ("image/svg+xml").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.AUDIO_MPEG">
+            <summary>
+            Mpeg ("audio/mpeg").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.WMA">
+            <summary>
+            Wma ("audio/x-ms-wma").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.REAL_AUDIO">
+            <summary>
+            Real Audio ("audio/vnd.rn-realaudio").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.WAV">
+            <summary>
+            Wav ("audio/x-wav").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.VIDOE_MPEG">
+            <summary>
+            Video Mpeg ("video/mpeg").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.MP4">
+            <summary>
+            MP4 ("video/mp4").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.QUICK_TIME">
+            <summary>
+            Quick Time ("video/quicktime").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.WMV">
+            <summary>
+            Wav ("video/x-ms-wmv").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.MS_VIDEO">
+            <summary>
+            MS Video ("video/x-msvideo").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.FLV">
+            <summary>
+            MS VIdoe ("video/x-flv").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.WEB_M">
+            <summary>
+            Web M ("video/webm").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.PDF">
+            <summary>
+            Pdf ("application/pdf").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.ZIP">
+            <summary>
+            Pdf ("application/zip").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.XML">
+            <summary>
+            Xml ("application/xml").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.JSON">
+            <summary>
+            Json ("application/json").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.FORM_ENCODED">
+            <summary>
+            Form ("application/x-www-form-urlencoded").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.FORM">
+            <summary>
+            Form ("application/x-www-form-urlencoded").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.OCTET_STREAM">
+            <summary>
+            Octet ("application/octet-stream").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.EXCEL">
+            <summary>
+            Excel ("application/vnd.ms-excel").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.EXCEL_OPEN_FORMAT">
+            <summary>
+            Excel Open Document Format ("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.POWERPOINT">
+            <summary>
+            PowerPoint ("application/vnd.ms-powerpoint").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.POWERPOINT_OPEN_FORMAT">
+            <summary>
+            PowerPoint Open Document Format ("application/vnd.openxmlformats-officedocument.presentationml.presentation").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.WORD">
+            <summary>
+            Word ("application/msword").
+            </summary>
+        </member>
+        <member name="F:Nano.Models.Const.HttpContentType.WORD_OPEN_FORMAT">
+            <summary>
+            Word Open Document Format ("application/vnd.openxmlformats-officedocument.wordprocessingml.document").
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Criterias.BaseQueryCriteria">
+            <inheritdoc />
+        </member>
+        <member name="M:Nano.Models.Criterias.BaseQueryCriteria.GetExpressions">
+            <inheritdoc />
+        </member>
+        <member name="T:Nano.Models.Criterias.DefaultQueryCriteria">
+            <inheritdoc />
+        </member>
+        <member name="P:Nano.Models.Criterias.DefaultQueryCriteria.AfterAt">
+            <summary>
+            After At.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.Criterias.DefaultQueryCriteria.BeforeAt">
+            <summary>
+            Before At.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Criterias.DefaultQueryCriteria.GetExpressions">
+            <inheritdoc />
+        </member>
+        <member name="T:Nano.Models.Criterias.DefaultQueryCriteriaSpatial">
+            <inheritdoc cref="T:Nano.Models.Criterias.Interfaces.IQueryCriteriaSpatial"/>
+        </member>
+        <member name="P:Nano.Models.Criterias.DefaultQueryCriteriaSpatial.Geometry">
+            <inheritdoc />
+        </member>
+        <member name="T:Nano.Models.Criterias.Interfaces.IQueryCriteriaSpatial">
+            <summary>
+            Query Criteria Spatial.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.Criterias.Interfaces.IQueryCriteriaSpatial.Geometry">
+            <summary>
+            Geometry.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.DefaultEntity">
+            <inheritdoc />
+        </member>
+        <member name="M:Nano.Models.DefaultEntity.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.DefaultEntity`1">
+            <inheritdoc cref="T:Nano.Models.Interfaces.IEntityWritable"/>
+        </member>
+        <member name="P:Nano.Models.DefaultEntity`1.IsDeleted">
+            <inheritdoc />
+        </member>
+        <member name="P:Nano.Models.DefaultEntity`1.CreatedAt">
+            <summary>
+            Created At.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.DefaultEntitySpatial">
+            <inheritdoc />
+        </member>
+        <member name="T:Nano.Models.DefaultEntitySpatial`1">
+            <inheritdoc cref="T:Nano.Models.Interfaces.IEntitySpatial"/>
+        </member>
+        <member name="P:Nano.Models.DefaultEntitySpatial`1.Geometry">
+            <inheritdoc />
+        </member>
+        <member name="T:Nano.Models.DefaultEntityUser">
+            <summary>
+            Default Entity User.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.DefaultEntityUser.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="T:Nano.Models.DefaultEntityUser`1">
+            <inheritdoc cref="T:Nano.Models.Interfaces.IEntityWritable"/>
+        </member>
+        <member name="P:Nano.Models.DefaultEntityUser`1.CreatedAt">
+            <summary>
+            Created At.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.EntityEvent">
+            <summary>
+            Entity Event.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.EntityEvent.Id">
+            <summary>
+            Id.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.EntityEvent.Type">
+            <summary>
+            Type.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.EntityEvent.State">
+            <summary>
+            State.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.EntityEvent.Data">
+            <summary>
+            Data.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.EntityEvent.#ctor(System.Object,System.String,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="id"></param>
+            <param name="type"></param>
+            <param name="state"></param>
+        </member>
+        <member name="T:Nano.Models.Error">
+            <summary>
+            Error.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.Error.Summary">
+            <summary>
+            Summary.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.Error.Exceptions">
+            <summary>
+            Exceptions.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.Error.IsTranslated">
+            <summary>
+            Is Translated.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.Error.IsCoded">
+            <summary>
+            Is Coded.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Eventing.Interfaces.IEventing">
+            <summary>
+            Eventing interface.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Eventing.Interfaces.IEventing.PublishAsync``1(``0,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Publishes a message to an exchange using 'fanout' publish/subscribe topology.
+            </summary>
+            <typeparam name="TMessage">The type of the message body.</typeparam>
+            <param name="body">The message body.</param>
+            <param name="routing">The routing key (if any).</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/>.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> (void).</returns>
+        </member>
+        <member name="M:Nano.Models.Eventing.Interfaces.IEventing.SubscribeAsync``1(System.IServiceProvider,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Consumes messages.
+            </summary>
+            <typeparam name="TMessage">The type of response body.</typeparam>
+            <param name="serviceProvider">The <see cref="T:System.IServiceProvider"/>.</param>
+            <param name="routing">The routing key (if any).</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/>.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> (void).</returns>
+        </member>
+        <member name="T:Nano.Models.Exceptions.BadRequestException">
+            <summary>
+            Bad Request Exception.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Exceptions.BadRequestException.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="T:Nano.Models.Exceptions.CodedException">
+            <summary>
+            Code Exception.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Exceptions.CodedException.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="T:Nano.Models.Exceptions.PermissionDeniedException">
+            <summary>
+            Permission Denied Exception.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Exceptions.TranslationException">
+            <summary>
+            Translation Exception.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Exceptions.TranslationException.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="T:Nano.Models.Extensions.DateTimeOffsetExtensions">
+            <summary>
+            DateTimeOffset Extensions.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Extensions.DateTimeOffsetExtensions.GetEpochTime(System.DateTimeOffset)">
+            <summary>
+            Gets the number of seconds since <see cref="F:Nano.Models.Extensions.DateTimeOffsetExtensions.epoch"/> (Unix).
+            </summary>
+            <param name="at">The <see cref="T:System.DateTimeOffset"/>.</param>
+            <returns>The number of seconds</returns>
+        </member>
+        <member name="T:Nano.Models.Extensions.ObjectExtensions">
+            <summary>
+            Object Extensions.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Extensions.ObjectExtensions.Parse``1(System.Object)">
+            <summary>
+            Parse.
+            Parses the object to type of <typeparamref name="T"></typeparamref>.
+            </summary>
+            <typeparam name="T">the type to parse to.</typeparam>
+            <param name="object">the object to parse.</param>
+            <returns>The parsed object.</returns>
+        </member>
+        <member name="T:Nano.Models.Extensions.StreamExtensions">
+            <summary>
+            Stream Extensions.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Extensions.StreamExtensions.ReadAllBytesAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Reads all bytes in the <see cref="T:System.IO.Stream"/> and returns the content as byte array.
+            </summary>
+            <param name="stream">The <see cref="T:System.IO.Stream"/>.</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/>.</param>
+            <returns>The content as byte array.</returns>
+        </member>
+        <member name="T:Nano.Models.Extensions.StringExtensions">
+            <summary>
+            String Extensions.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Extensions.StringExtensions.Substring(System.String,System.String)">
+            <summary>
+            Returns a substring consisting of all characters after the index of the passed <paramref name="indexOf"/>
+            from the passed <paramref name="string"/>.
+            </summary>
+            <param name="string">The <see cref="T:System.String"/>.</param>
+            <param name="indexOf">The <see cref="T:System.String"/> to find indexOf in the <paramref name="string"/>.</param>
+            <returns>The substring.</returns>
+        </member>
+        <member name="M:Nano.Models.Extensions.StringExtensions.TrySubstring(System.String,System.String,System.String@)">
+            <summary>
+            Tries to get a substring consisting of all characters after the index of the passed <paramref name="indexOf"/>
+            from the passed <paramref name="string"/>.
+            </summary>
+            <param name="string">The <see cref="T:System.String"/>.</param>
+            <param name="indexOf">The <see cref="T:System.String"/> to find indexOf in the <paramref name="string"/>.</param>
+            <param name="result">The substring.</param>
+            <returns>A <see cref="T:System.Boolean"/> indicating success or not.</returns>
+        </member>
+        <member name="T:Nano.Models.Extensions.TypeExtensions">
+            <summary>
+            Type Extensions.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Extensions.TypeExtensions.GetFriendlyName(System.Type)">
+            <summary>
+            Gets a friendly display name for the <see cref="T:System.Type"/>.
+            </summary>
+            <param name="type">The <see cref="T:System.Type"/> from which to get all parent types.</param>
+            <returns>A friendly display name.</returns>
+        </member>
+        <member name="M:Nano.Models.Extensions.TypeExtensions.IsTypeOf(System.Type,System.Type)">
+            <summary>
+            Gets whehter the passed <paramref name="type"/> derives or implements the passed <paramref name="baseType"/>.
+            All base classes and interfaces are inspected.
+            </summary>
+            <param name="type">The <see cref="T:System.Type"/> from which to determine, if the passed <paramref name="baseType"/> is parent.</param>
+            <param name="baseType">The <see cref="T:System.Type"/> that be inherited or implemented by the passed <paramref name="type"/>.</param>
+            <returns>True or false, depending on whehter the <paramref name="type"/> implements or derives from <paramref name="baseType"/>.</returns>
+        </member>
+        <member name="M:Nano.Models.Extensions.TypeExtensions.IsSimple(System.Type)">
+            <summary>
+            Is Simple.
+            Checks if the <see cref="T:System.Type"/> is simple.
+            </summary>
+            <param name="type">The <see cref="T:System.Type"/>.</param>
+            <returns>Boolean indicating if the type is simple.</returns>
+        </member>
+        <member name="T:Nano.Models.Helpers.TypesHelper">
+            <summary>
+            Types Helper
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Helpers.TypesHelper.GetAllTypes">
+            <summary>
+            Get All Types.
+            </summary>
+            <returns>A collection of types.</returns>
+        </member>
+        <member name="T:Nano.Models.Interfaces.IEntity">
+            <summary>
+            Entity interface.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Interfaces.IEntityAuditable">
+            <summary>
+            Entity Auditable interface.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Interfaces.IEntityAuditableNegated">
+            <summary>
+            Entity Auditable Negated interface.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Interfaces.IEntityCreatable">
+            <summary>
+            Entity Creatable.
+            Implementing entities are creatable.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Interfaces.IEntityCreatableAndUpdatable">
+            <summary>
+            Entity Creatable and updatable.
+            Implementing entities are creatable and updatable.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Interfaces.IEntityDeletable">
+            <summary>
+            Entity Deletable.
+            Implementing entities are deletable.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Interfaces.IEntityDeletableSoft">
+            <summary>
+            Entity Deletable.
+            Implementing entities are deletable.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.Interfaces.IEntityDeletableSoft.IsDeleted">
+            <summary>
+            Deleted at.
+            Indicates whether the entity is deleted or not. Zero means active (true) and anything greater than zero means deleted (false).
+            THe Unix-based time in miliseconds is stored, in order for allowing unique indexes with soft-deletetion.
+            NOTE: Only active instances are returned from queries, when filters are enabled (default behavior).
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Interfaces.IEntityIdentity`1">
+            <summary>
+            Entity identity inteface.
+            Implementing <see cref="T:Nano.Models.Interfaces.IEntity"/>'s having identity property.
+            </summary>
+            <typeparam name="TIdentity">The type of <see cref="P:Nano.Models.Interfaces.IEntityIdentity`1.Id"/>.</typeparam>
+        </member>
+        <member name="P:Nano.Models.Interfaces.IEntityIdentity`1.Id">
+            <summary>
+            Id.
+            Uniquely identifies the <see cref="T:Nano.Models.Interfaces.IEntity"/>.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Interfaces.IEntitySpatial">
+            <summary>
+            Entity Spatial.
+            Implementing entities are queryable spatially, having a property of <see cref="P:Nano.Models.Interfaces.IEntitySpatial.Geometry"/> type.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.Interfaces.IEntitySpatial.Geometry">
+            <summary>
+            Geometry.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Interfaces.IEntityUpdatable">
+            <summary>
+            Entity Deletable.
+            Implementing entities are updatable.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Interfaces.IEntityUser`1">
+            <summary>
+            Entity User inteface.
+            </summary>
+            <typeparam name="TIdentity">The identity type.</typeparam>
+        </member>
+        <member name="P:Nano.Models.Interfaces.IEntityUser`1.IdentityUserId">
+            <summary>
+            Identity User Id.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.Interfaces.IEntityUser`1.IdentityUser">
+            <summary>
+            Identity User.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Interfaces.IEntityWritable">
+            <summary>
+            Entity Writable.
+            Implementing entities are creatable, updatable and deletable.
+            Implements <see cref="T:Nano.Models.Interfaces.IEntityCreatable"/>, <see cref="T:Nano.Models.Interfaces.IEntityUpdatable"/> and <see cref="T:Nano.Models.Interfaces.IEntityDeletable"/>.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.NamedStream">
+            <summary>
+            Named Stream.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.NamedStream.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="P:Nano.Models.NamedStream.Stream">
+            <summary>
+            Stream.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.NamedStream.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="T:Nano.Models.Serialization.Json.BaseEntityContractResolver">
+            <summary>
+            Base Entity Contract Resolver (abstract).
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Serialization.Json.BaseEntityContractResolver.SerializeOnlyNonEmptyEnumerables(System.Reflection.MemberInfo,System.Type,Newtonsoft.Json.Serialization.JsonProperty@)">
+            <summary>
+            Serialize Only Non Empty Enumerables.
+            </summary>
+            <param name="member">The <see cref="T:System.Reflection.MemberInfo"/>.</param>
+            <param name="propertyType">The <see cref="T:System.Type"/>.</param>
+            <param name="property">The <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/>.</param>
+        </member>
+        <member name="T:Nano.Models.Serialization.Json.Const.Globals">
+            <summary>
+            Globals.
+            </summary>
+        </member>
+        <member name="M:Nano.Models.Serialization.Json.Const.Globals.GetDefaultJsonSerializerSettings">
+            <summary>
+            Get Json Serializer Settings.
+            </summary>
+        </member>
+        <member name="T:Nano.Models.Serialization.Json.DefaultEntityContractResolver">
+            <inheritdoc />
+        </member>
+        <member name="M:Nano.Models.Serialization.Json.DefaultEntityContractResolver.CreateProperty(System.Reflection.MemberInfo,Newtonsoft.Json.MemberSerialization)">
+            <summary>
+            Create a property.
+            </summary>
+            <param name="member">The <see cref="T:System.Reflection.MemberInfo"/>.</param>
+            <param name="memberSerialization">The <see cref="T:Newtonsoft.Json.MemberSerialization"/>.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/>.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nano.Storage</name>
+    </assembly>
+    <members>
+        <member name="T:Nano.Storage.Extensions.ServiceCollectionExtensions">
+            <summary>
+            Service Collection Extensions.
+            </summary>
+        </member>
+        <member name="M:Nano.Storage.Extensions.ServiceCollectionExtensions.AddStorage``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds storage provider of type <typeparamref name="TProvider"/> to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </summary>
+            <typeparam name="TProvider">The <typeparamref name="TProvider"/> type.</typeparam>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</returns>
+        </member>
+        <member name="M:Nano.Storage.Extensions.ServiceCollectionExtensions.AddStorage(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Add file storage to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</param>
+            <param name="configuration">The <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/>.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</returns>
+        </member>
+        <member name="T:Nano.Storage.Interfaces.IPathProvider">
+            <summary>
+            Path Provider interface.
+            </summary>
+        </member>
+        <member name="P:Nano.Storage.Interfaces.IPathProvider.RootDir">
+            <summary>
+            Root Dir.
+            </summary>
+        </member>
+        <member name="P:Nano.Storage.Interfaces.IPathProvider.TempDir">
+            <summary>
+            Temp Dir.
+            </summary>
+        </member>
+        <member name="T:Nano.Storage.Interfaces.IStorageProvider">
+            <summary>
+            Storage Provider interface.
+            Defines the provider used for storage in the application.
+            </summary>
+        </member>
+        <member name="M:Nano.Storage.Interfaces.IStorageProvider.Configure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Nano.Storage.StorageOptions)">
+            <summary>
+            Configures the storage provider.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</param>
+            <param name="options">The <see cref="T:Nano.Storage.StorageOptions"/>.</param>
+            <returns>The <see cref="T:Nano.Models.Eventing.Interfaces.IEventing"/>.</returns>
+        </member>
+        <member name="T:Nano.Storage.PathProvider">
+            <summary>
+            Path Provider.
+            </summary>
+        </member>
+        <member name="P:Nano.Storage.PathProvider.StorageOptions">
+            <summary>
+            Storage Options.
+            </summary>
+        </member>
+        <member name="P:Nano.Storage.PathProvider.RootDir">
+            <inheritdoc />
+        </member>
+        <member name="P:Nano.Storage.PathProvider.TempDir">
+            <inheritdoc />
+        </member>
+        <member name="M:Nano.Storage.PathProvider.#ctor(Nano.Storage.StorageOptions)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="storageOptions">The <see cref="T:Nano.Storage.StorageOptions"/>.</param>
+        </member>
+        <member name="T:Nano.Storage.Providers.Azure.AzureFileshareProvider">
+            <summary>
+            Azure Fileshare Provider.
+            </summary>
+        </member>
+        <member name="P:Nano.Storage.Providers.Azure.AzureFileshareProvider.Options">
+            <summary>
+            Options.
+            </summary>
+        </member>
+        <member name="M:Nano.Storage.Providers.Azure.AzureFileshareProvider.#ctor(Nano.Storage.StorageOptions)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="options">The <see cref="T:Nano.Storage.StorageOptions"/>.</param>
+        </member>
+        <member name="M:Nano.Storage.Providers.Azure.AzureFileshareProvider.Configure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Nano.Storage.StorageOptions)">
+            <inheritdoc />
+        </member>
+        <member name="T:Nano.Storage.Providers.Azure.HealthChecks.AzureFileshareStorageHealthCheck">
+            <summary>
+            Azure File-Share Storage Health-Check.
+            </summary>
+        </member>
+        <member name="M:Nano.Storage.Providers.Azure.HealthChecks.AzureFileshareStorageHealthCheck.#ctor(System.String,System.String,Azure.Storage.Files.Shares.ShareClientOptions)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="connectionString">The storage connection-string.</param>
+            <param name="shareName">The share name.</param>
+            <param name="clientOptions">the <see cref="T:Azure.Storage.Files.Shares.ShareClientOptions"/>.</param>
+        </member>
+        <member name="M:Nano.Storage.Providers.Azure.HealthChecks.AzureFileshareStorageHealthCheck.CheckHealthAsync(Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckContext,System.Threading.CancellationToken)">
+            <summary>
+            Check Health Async.
+            </summary>
+            <param name="context">The <see cref="T:Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckContext"/>.</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/>.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckResult"/>.</returns>
+        </member>
+        <member name="T:Nano.Storage.Providers.Azure.HealthChecks.Extensions.HealthChecksBuilderExtensions">
+            <summary>
+            Health-Check Builder Extensions.
+            </summary>
+        </member>
+        <member name="M:Nano.Storage.Providers.Azure.HealthChecks.Extensions.HealthChecksBuilderExtensions.AddAzureFileshareStorage(Microsoft.Extensions.DependencyInjection.IHealthChecksBuilder,System.String,System.String,System.String,System.Nullable{Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.TimeSpan})">
+            <summary>
+            Add a health check for Azure Fileshare Storage.
+            </summary>
+            <param name="builder">The <see cref="T:Microsoft.Extensions.DependencyInjection.IHealthChecksBuilder"/>.</param>
+            <param name="connectionString">The Azure Storage connectionstring.</param>
+            <param name="shareName">The Azure Storage share name. to check if exist. Optional.If <c>null</c> then file-share name check is not executed.</param>
+            <param name="name">The health check name. Optional. If <c>null</c> the type name 'azurefileshare' will be used for the name.</param>
+            <param name="failureStatus">The <see cref="T:Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus"/> that should be reported when the health check fails. Optional. If <c>null</c> then the default status of <see cref="F:Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus.Unhealthy"/> will be reported.</param>
+            <param name="tags">A list of tags that can be used to filter sets of health checks. Optional.</param>
+            <param name="timeout">An optional System.TimeSpan representing the timeout of the check.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.IHealthChecksBuilder"/>.</returns>
+        </member>
+        <member name="T:Nano.Storage.StorageOptions">
+            <summary>
+            Storage Options
+            </summary>
+        </member>
+        <member name="P:Nano.Storage.StorageOptions.SectionName">
+            <summary>
+            Section Name.
+            </summary>
+        </member>
+        <member name="P:Nano.Storage.StorageOptions.AccountName">
+            <summary>
+            Account Name.
+            </summary>
+        </member>
+        <member name="P:Nano.Storage.StorageOptions.AccountKey">
+            <summary>
+            Account Key.
+            </summary>
+        </member>
+        <member name="P:Nano.Storage.StorageOptions.ShareName">
+            <summary>
+            Share Name.
+            </summary>
+        </member>
+        <member name="P:Nano.Storage.StorageOptions.UseHealthCheck">
+            <summary>
+            Use Health Check.
+            </summary>
+        </member>
+        <member name="P:Nano.Storage.StorageOptions.UnhealthyStatus">
+            <summary>
+            Unhealthy Status.
+            </summary>
+        </member>
+        <member name="P:Nano.Storage.StorageOptions.ConnectionString">
+            <summary>
+            Connection String.
+            </summary>
+        </member>
+    </members>
+</doc>
