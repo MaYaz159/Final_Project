@@ -6,12 +6,16 @@
 /* The first value corresponds to vertical padding (top and bottom). */
 /* The second value corresponds to horizontal padding (left and right). */
 
-#container {
+#homepage {
     width: 100%;
-    height: 100vh;
+    height: 2000px;
     position: relative; /* Needed for positioned child elements */
     display: flex;
     flex-direction: column; /* Stack header and content vertically */
+}
+
+* {
+    user-select: none;
 }
 
 @font-face {
@@ -34,7 +38,63 @@
     font-family: 'font3';
     font-style: normal;
     font-display: swap;
-    src: url('/fonts/iImong.ttf') format('opentype');
+    src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font4';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/Roca Bold Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font5';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/LeagueSpartan-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'font6';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font7';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/Ubuntu-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font8';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/HammersmithOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font9';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/HKGrotesk-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'font10';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/Retro Floral.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font11';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/PineWords-Regular.ttf') format('truetype');
 }
 
 #header {
@@ -44,7 +104,8 @@
     z-index: 1000; /* Ensure the header stays on top of other content */
     width: 100%; /* Try using view_port width */
     height: 12vh;
-    background-color: rgb(242, 200, 29, 0.8); /* Orange with 80% opacity */
+    background-color: rgb(211, 84, 0, 0.8);
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */ /* Optional: adds a shadow for a little depth */
 }
 
 .logoandimage {
@@ -83,7 +144,7 @@
 
 .list_items {
     float: right;
-    width: 64%;
+    width: 66%;
     height: 100%;
     display: flex; /* Enable Flex_box */
     justify-content: flex-start; /* Align children to the left */
@@ -111,7 +172,7 @@ a {
 
 .button {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-right: 10px; /* Add space */
+    margin-right: 25px; /* Add space */
     background-color: black;
     color: white;
     width: 100px;
@@ -122,6 +183,11 @@ a {
     text-align: center; /* Center the text */
     line-height: 33px; /* Vertically center the text */
 }
+
+    .button:hover {
+        background-color: #FDF6EC;
+        color: black;
+    }
 
 .social_buttons {
     margin-top: 2.1%;
@@ -166,10 +232,378 @@ a {
         opacity: 1; /* Makes the line fully visible when hovering */
     }
 
-.content {
+.container {
     width: 100%;
     flex-grow: 1; /* Make content take remaining space */
     position: relative; /* Ensure positioned elements inside can be positioned relative to this */
     height: calc(100vh - 12vh); /* Ensure content fills the remaining space */
     overflow: hidden; /* Prevents overflow of child elements */
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #FDF6EC;
 }
+
+.text-content {
+    flex: 1; /* Flex_box to take remaining space */
+    display: flex;
+    color: #000;
+    justify-content: center; /* Align horizontally */
+    align-items: center; /* Align vertically */
+    flex-direction: column;
+    margin-top: -20px;
+    /* padding: 10px; */
+}
+
+#headertext1 {
+    font-family: font4;
+    width: 400px;
+    font-size: 40px;
+    margin: 0 0 20px; /* Space below */
+}
+
+#headertext2 {
+    font-family: font3;
+    width: 400px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 20px; /* Space below */
+}
+
+#firstp {
+    font-size: 15px;
+    font-family: font3;
+    width: 400px;
+    line-height: 1.5; /* Line height for readability */
+}
+
+#UpdatePanel1 {
+    width: 400px;
+}
+
+#Button1 {
+    float: left; /* Aligns the button to the left */
+    font-family: font7;
+    font-size: 15px;
+    padding: 12px 24px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 3px #000; /* Dashed border around the image */
+    border-radius: 10px; /* Makes the image oval */
+    margin-left: 25px;
+    margin-top: 2px;
+}
+
+    #Button1:hover {
+        background-color: rgb(211, 84, 0);
+        color: black;
+    }
+
+.image-content {
+    flex: 1; /* Flex_box to take remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+}
+
+#img1 {
+    width: auto; /* width for the image */
+    height: 440px; /* height for the image */
+    border: 3px dashed #000; /* Dashed border around the image */
+    border-radius: 20%; /* Makes the image oval */
+}
+
+#big2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    height: 100vh; /* Ensure content fills the remaining space */
+    overflow: hidden; /* Prevents overflow of child elements */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #FDF6EC;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 5s forwards;
+    margin-left: 30px;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#image2 {
+    width: 100%;
+    border-radius: 30px;
+    border: 2px solid #000;
+}
+
+.text-container {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Align horizontally */
+    align-items: center; /* Align vertically */
+    flex-direction: column;
+}
+
+#h2 {
+    font-family: font5;
+    width: 450px;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#p {
+    font-family: font6;
+    width: 450px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.logbutton {
+    font-family: font7;
+    font-size: 15px;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 3px #000; /* Dashed border around the image */
+    border-radius: 20px; /* Makes the image oval */
+}
+
+    .logbutton:hover {
+        background-color: rgb(211, 84, 0);
+        color: black;
+    }
+
+@media (max-width: 768px) {
+    .container2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container img {
+        max-width: 80%;
+    }
+}
+
+#big3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    height: 100vh; /* Ensure content fills the remaining space */
+    overflow: hidden; /* Prevents overflow of child elements */
+    background-color: #FDF6EC;
+}
+
+.container3 {
+    width: 100%;
+    height: 100vh; /* Ensure content fills the remaining space */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    overflow: hidden; /* Prevents overflow of child elements */
+}
+
+.text {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    overflow: hidden; /* Prevents overflow of child elements */
+    justify-content: center; /* Align horizontally */
+    align-items: center; /* Align vertically */
+    flex-direction: column;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+}
+
+#h1text {
+    font-family: font8;
+    font-size: 50px;
+    width: 300px;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-top: -25px;
+}
+
+#ptext {
+    font-family: font9;
+    width: 320px;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.images {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    overflow: hidden; /* Prevents overflow of child elements */
+    justify-content: center; /* Equal space between items */
+    align-items: center; /* Align vertically */
+}
+
+.feature {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Align horizontally */
+    align-items: center; /* Align vertically */
+    flex-direction: column;
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    overflow: hidden; /* Prevents overflow of child elements */
+}
+
+    #imgs {
+        width: 230px; /* Set the width of images */
+        height: 300px; /* Maintain aspect ratio */
+        border: 3px solid #000; /* Dashed border around the image */
+    }
+
+#h2text {
+    font-family: font6;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#big4 {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh; /* Ensure content fills the remaining space */
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    overflow: hidden; /* Prevents overflow of child elements */
+}
+
+.custom-footer {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    overflow: hidden; /* Prevents overflow of child elements */
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+.name {
+    display: flex;
+    align-items: start;
+}
+
+.footer-left {
+    width: 40%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    display: flex;
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    justify-content: center; /* Align horizontally */
+    align-items: flex-start; /* Align vertically */
+}
+
+.footer-logo {
+    width: 90px;
+    height: 90px;
+}
+
+.brand-name {
+    font-family: font1;
+    font-size: 40px;
+    display: flex;
+    width: 300px;
+    height: 90px;
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    justify-content: center; /* Align horizontally */
+    align-items: center; /* Align vertically */
+    margin-top: -5px;
+}
+
+.credits {
+    font-family: font10;
+    font-size: 20px;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+.footer-right {
+    width: 60%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    display: flex;
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    justify-content: center; /* Align horizontally */
+    align-items: flex-end; /* Align vertically */
+    margin-right: 20px;
+}
+
+.contact-info p {
+    margin: 20px 0;
+    font-family: font11; /* Ensures consistency */
+}
+
+.icon-location::before {
+    content: "📍";
+    font-style: normal; /* Prevents italic effect */
+    font-family: font11; /* Ensures consistency */
+}
+
+.icon-phone::before {
+    content: "📞";
+    font-style: normal; /* Prevents italic effect */
+    font-family: font11; /* Ensures consistency */
+}
+
+.icon-email::before {
+    content: "✉️";
+    font-style: normal; /* Prevents italic effect */
+    font-family: font11; /* Ensures consistency */
+}
+
+

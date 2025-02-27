@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>PICK and COOK</title>
+    <meta name="description" content="PICK and COOK Website">
+    <link rel="shortcut icon" href="img/logo.ico">
+    <link rel="stylesheet" href="style/HOME.css">
+</head>
+
+<body>
+
+    <div class="content">
+        <video autoplay muted loop id="video">
+            <source src="videos/bg.mp4" type="video/mp4">
+        </video>
+        <audio id="audio" loop>
+            <source src="videos/audio.mp3" type="audio/mp3">
+        </audio>
+
+        <button id="audioButton" onclick="toggleAudio()">
+            <img src="img/ns.png" alt="No_Audio" style="width: 20px; height: 20px;" />
+        </button>
+
+
+
+        <script>
+            function toggleAudio() {
+                var audio = document.getElementById("audio");
+                var button = document.getElementById("audioButton");
+
+                if (audio.paused) {
+                    audio.play();
+                    // Change the image to a different one when the audio plays
+                    button.innerHTML = '<img src="img/s.png" alt="Play Audio" style="width: 20px; height: 20px;" />';
+                } else {
+                    audio.pause();
+                    // Change the image back when the audio is paused
+                    button.innerHTML = '<img src="img/ns.png" alt="No_Audio" style="width: 20px; height: 20px;" />';
+                }
+            }
+        </script>
+
+        <div id="big">
+            <a id="Button1" href="LOGIN_page.aspx"> Get Started! </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
