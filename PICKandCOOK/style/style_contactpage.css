@@ -243,7 +243,6 @@ a {
     overflow: hidden; /* Prevents overflow of child elements */
 }
 
-
 .form-container {
     width: 700px;
     height: 760px;
@@ -303,6 +302,45 @@ label {
         background-color: rgb(211, 84, 0, 0.8);
         color: black;
     }
+
+.floating-message {
+    position: fixed;
+    font-family: font10;
+    top: 15px;
+    left: 35%;
+    background-color: #F4E1D1;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    font-size: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+    .floating-message.error {
+        background-color: #f44336;
+    }
+
+#emaildiv {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+textarea.form-control {
+    resize: none; /* Disable resizing */
+}
+
+/* Error message label styling */
+#lblemail {
+    font-family: font9;
+    color: red; /* Red text color */
+    font-weight: bold; /* Bold font */
+    font-size: 15px; /* Adjust font size */
+    text-align: center;
+}
 
 #big4 {
     display: flex;

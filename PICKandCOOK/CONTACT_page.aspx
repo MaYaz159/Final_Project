@@ -51,18 +51,22 @@
                </header>
                <div id="container">
                <form id="contactForm" runat="server" class="form-container">
+                            <asp:Literal ID="ltMessage" runat="server"></asp:Literal>
                             <div class="form-header">Contact Form</div>
                             <div class="form-group">
                                 <label for="firstName">First Name :</label>
-                                <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" Required="true"></asp:TextBox>
+                                <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" MaxLength="20" Required="true"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <label for="lastName">Last Name :</label>
-                                <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control" Required="true"></asp:TextBox>
+                                <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control" MaxLength="20" Required="true"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email :</label>
                                 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Required="true"></asp:TextBox>
+                            </div>
+                            <div id="emaildiv">
+                            <asp:Label ID="lblemail" runat="server" Text="" Visible="false"></asp:Label>
                             </div>
                             <div class="form-group">
                                 <label for="message">Message :</label>
@@ -71,6 +75,22 @@
                             <div class="form-group">
                                  <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click"  />
                             </div>
+                            <script>
+                                function showFloatingMessage(message, type) {
+                                    var msgDiv = document.createElement("div");
+                                    msgDiv.className = "floating-message " + type;
+                                    msgDiv.innerHTML = message;
+                                    document.body.appendChild(msgDiv);
+                                    msgDiv.style.display = "block";
+
+                                    setTimeout(function () {
+                                        msgDiv.style.opacity = "0";
+                                        setTimeout(function () {
+                                            document.body.removeChild(msgDiv);
+                                        }, 500);
+                                    }, 6000);
+                                }
+                            </script>
                </form>
                </div>
 

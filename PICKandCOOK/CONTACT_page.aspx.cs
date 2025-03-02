@@ -17,55 +17,85 @@ namespace PICKandCOOK
 
         }
 
+        // Method to validate email format
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var mailAddress = new System.Net.Mail.MailAddress(email);
+                return true;  // Valid email
+            }
+            catch
+            {
+                return false;  // Invalid email
+            }
+        }
+
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+
             string firstName = txtFirstName.Text;
             string lastName = txtLastName.Text;
             string email = txtEmail.Text;
             string message = txtMessage.Text;
 
-            // Retrieve the connection string from web.config
-            string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
-
-            // SQL query to insert data into the Messages table
-            string query = "INSERT INTO Messages (firstName, lastName, email, message) VALUES (@FirstName, @LastName, @Email, @Message)";
-
-            // Use a SqlConnection and SqlCommand to execute the query
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            if (IsValidEmail(email))
             {
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    // Add parameters to prevent SQL injection
-                    cmd.Parameters.AddWithValue("@FirstName", firstName);
-                    cmd.Parameters.AddWithValue("@LastName", lastName);
-                    cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@Message", message);
 
-                    try
+                // Retrieve the connection string from web.config
+                string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
+
+                // SQL query to insert data into the Messages table
+                string query = "INSERT INTO Messages (firstName, lastName, email, message) VALUES (@FirstName, @LastName, @Email, @Message)";
+
+                // Use a SqlConnection and SqlCommand to execute the query
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        // Open the connection and execute the query
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                        Response.Write("<div class='message'>Your message has been successfully sent!");
-                        Visible = true;
-                        txtFirstName.Text = "";
-                        txtLastName.Text = "";
-                        txtEmail.Text = "";
-                        txtMessage.Text = "";
-                    }
-                    catch (Exception ex)
-                    {
-                        // Handle errors (e.g., log them)
-                        Response.Write("<div class='message'>Error: " + ex.Message);
-                        Visible = true;
-                    }
-                    finally
-                    {
-                        // Ensure the connection is closed even if an exception occurs
-                        conn.Close();
+                        // Add parameters to prevent SQL injection
+                        cmd.Parameters.AddWithValue("@FirstName", firstName);
+                        cmd.Parameters.AddWithValue("@LastName", lastName);
+                        cmd.Parameters.AddWithValue("@Email", email);
+                        cmd.Parameters.AddWithValue("@Message", message);
+
+                        try
+                        {
+                            // Open the connection and execute the query
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+
+                            // JavaScript to show floating message
+                            string script = "showFloatingMessage('Your message has been successfully sent!', 'success');";
+                            ClientScript.RegisterStartupScript(this.GetType(), "FloatingMessage", script, true);
+
+                            txtFirstName.Text = "";
+                            txtLastName.Text = "";
+                            txtEmail.Text = "";
+                            txtMessage.Text = "";
+                        }
+                        catch (Exception ex)
+                        {
+                            string script = "showFloatingMessage('Error: " + ex.Message.Replace("'", "\\'") + "', 'error');";
+                            ClientScript.RegisterStartupScript(this.GetType(), "FloatingMessage", script, true);
+                        }
+                        finally
+                        {
+                            // Ensure the connection is closed even if an exception occurs
+                            conn.Close();
+                        }
                     }
                 }
             }
+
+            else
+            {
+                lblemail.Text = "Please enter a valid email address.";
+                lblemail.Visible = true;
+                string script = "showFloatingMessage('Error: " + lblemail.Text.Replace("'", "\\'") + "', 'error');";
+                ClientScript.RegisterStartupScript(this.GetType(), "FloatingMessage", script, true);
+            }
+
         }
 
     }
