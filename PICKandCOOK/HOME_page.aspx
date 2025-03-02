@@ -27,7 +27,7 @@
                 <div class="list_items">
                     <ul class="items">
                         <li><a href="HOME_page.aspx">Home</a></li>
-                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="RECIPES_page.aspx">Recipes</a></li>
                         <li><a href="planner.html">Planner</a></li>
                         <li><a href="services.html">Pantry</a></li>
                         <li><a href="shop.html">Shop</a></li>
@@ -35,7 +35,7 @@
                         <li><a href="LOGIN_page.aspx">Log In</a></li>
                     </ul>
                     <div class="social_buttons">
-                        <a class="button" href="contact.html"> Contact Us </a>
+                        <a class="button" href="CONTACT_page.aspx"> Contact Us </a>
                     </div>
                     <div class="s">
                         <a href="https://facebook.com/">

@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|c:\\users\\user\\onedrive\\desktop\\project\\pickandcook\\home_page.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|solutionrelative:home_page.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|c:\\users\\user\\onedrive\\desktop\\project\\pickandcook\\contact_page.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|solutionrelative:contact_page.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|c:\\users\\user\\onedrive\\desktop\\project\\pickandcook\\style\\style_homepage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|solutionrelative:style\\style_homepage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|c:\\users\\user\\onedrive\\desktop\\project\\pickandcook\\style\\style_contactpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|solutionrelative:style\\style_contactpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|c:\\users\\user\\onedrive\\desktop\\project\\pickandcook\\contact_page.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|solutionrelative:contact_page.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,27 +47,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "style_homepage.css",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\style\\style_homepage.css",
-              "RelativeDocumentMoniker": "style\\style_homepage.css",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\style\\style_homepage.css",
-              "RelativeToolTip": "style\\style_homepage.css",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAAALsAAAAhAAAAAAAAAA==",
+              "Title": "style_contactpage.css",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\style\\style_contactpage.css",
+              "RelativeDocumentMoniker": "style\\style_contactpage.css",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\style\\style_contactpage.css",
+              "RelativeToolTip": "style\\style_contactpage.css",
+              "ViewState": "AgIAACEBAAAAAAAAAAAAACwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-27T12:04:19.776Z",
+              "WhenOpened": "2025-03-02T12:38:15.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CONTACT_page.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\CONTACT_page.aspx.cs",
+              "RelativeDocumentMoniker": "CONTACT_page.aspx.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\CONTACT_page.aspx.cs",
+              "RelativeToolTip": "CONTACT_page.aspx.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAcwEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T12:36:33.79Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HOME_page.aspx",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\HOME_page.aspx",
-              "RelativeDocumentMoniker": "HOME_page.aspx",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\HOME_page.aspx",
-              "RelativeToolTip": "HOME_page.aspx",
+              "Title": "CONTACT_page.aspx",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\CONTACT_page.aspx",
+              "RelativeDocumentMoniker": "CONTACT_page.aspx",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\CONTACT_page.aspx",
+              "RelativeToolTip": "CONTACT_page.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-27T12:04:16.306Z",
+              "WhenOpened": "2025-03-01T22:39:01.974Z",
               "EditorCaption": ""
             }
           ]

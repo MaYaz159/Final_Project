@@ -185,7 +185,7 @@ a {
 }
 
     .button:hover {
-        background-color: #FDF6EC;
+        background-color: #F4E1D1;
         color: black;
     }
 
@@ -241,7 +241,7 @@ a {
     display: flex;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #FDF6EC;
+    background-color: #F4E1D1;
 }
 
 .text-content {
@@ -297,7 +297,7 @@ a {
 }
 
     #Button1:hover {
-        background-color: rgb(211, 84, 0);
+        background-color: rgb(211, 84, 0, 0.8);
         color: black;
     }
 
@@ -326,7 +326,7 @@ a {
     overflow: hidden; /* Prevents overflow of child elements */
     padding: 20px;
     box-sizing: border-box;
-    background-color: #FDF6EC;
+    background-color: #F4E1D1;
 }
 
 .container2 {
@@ -398,7 +398,7 @@ a {
 }
 
     .logbutton:hover {
-        background-color: rgb(211, 84, 0);
+        background-color: rgb(211, 84, 0, 0.8);
         color: black;
     }
 
@@ -421,7 +421,7 @@ a {
     position: relative; /* Ensure positioned elements inside can be positioned relative to this */
     height: 100vh; /* Ensure content fills the remaining space */
     overflow: hidden; /* Prevents overflow of child elements */
-    background-color: #FDF6EC;
+    background-color: #F4E1D1;
 }
 
 .container3 {
