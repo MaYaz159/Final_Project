@@ -77,3 +77,36 @@
 04/03/2025 02:06:32: Generated Password : 86be
 04/03/2025 02:06:32: Password : 86be
 04/03/2025 02:06:34: Unhandled exception: The remote host closed the connection. The error code is 0x800704CD.
+04/03/2025 04:50:51: Query URL: ?code=4%2F0AQSTgQFcR-GCGockybSqdipocvvRJYs5-HSF7AeIX_qcXhglTjwAznsRIBzKX1YzYvT11w&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=consent
+04/03/2025 04:50:51: Code URL: 4/0AQSTgQFcR-GCGockybSqdipocvvRJYs5-HSF7AeIX_qcXhglTjwAznsRIBzKX1YzYvT11w
+04/03/2025 04:50:53: Response Status Code: OK
+04/03/2025 04:50:54: Generated Password : 249c
+04/03/2025 04:50:54: Password : 249c
+04/03/2025 04:51:11: OAuth response already handled, skipping.
+04/03/2025 04:51:18: OAuth response already handled, skipping.
+04/03/2025 04:51:45: OAuth response already handled, skipping.
+04/03/2025 04:51:53: OAuth response already handled, skipping.
+04/03/2025 04:51:58: OAuth response already handled, skipping.
+04/03/2025 04:53:16: Query URL: ?code=4%2F0AQSTgQGCnjGtmVURoESxAZlO9nXDreopTkQCTDpTHRk_Jl0-JmY5lwkscD_wVWMCyCRr1w&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none
+04/03/2025 04:53:16: Code URL: 4/0AQSTgQGCnjGtmVURoESxAZlO9nXDreopTkQCTDpTHRk_Jl0-JmY5lwkscD_wVWMCyCRr1w
+04/03/2025 04:53:18: Response Status Code: OK
+04/03/2025 04:53:18: Generated Password : 4c5e
+04/03/2025 04:53:18: Password : 4c5e
+04/03/2025 04:56:19: Query URL: ?code=4%2F0AQSTgQHGS3zFzGaS7FSU8VxvE-ISgW3JadI6VPvWqHgg3lVknKecdgK_-ALSGMwgEPbtXA&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none
+04/03/2025 04:56:19: Code URL: 4/0AQSTgQHGS3zFzGaS7FSU8VxvE-ISgW3JadI6VPvWqHgg3lVknKecdgK_-ALSGMwgEPbtXA
+04/03/2025 04:56:20: Response Status Code: OK
+04/03/2025 04:56:21: Generated Password : c874
+04/03/2025 04:56:21: Password : c874
+04/03/2025 04:56:22: Unhandled exception: The remote host closed the connection. The error code is 0x800704CD.
+04/03/2025 04:57:27: Query URL: ?code=4%2F0AQSTgQHLaDkjhVidspxlgT4Qs-pI06DHHXQE0APEBPo0zn1aJ55XrbtNeZLoNTt6FKAeQg&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=consent
+04/03/2025 04:57:27: Code URL: 4/0AQSTgQHLaDkjhVidspxlgT4Qs-pI06DHHXQE0APEBPo0zn1aJ55XrbtNeZLoNTt6FKAeQg
+04/03/2025 04:57:29: Response Status Code: OK
+04/03/2025 04:57:30: Generated Password : 41a3
+04/03/2025 04:57:30: Password : 41a3
+04/03/2025 04:57:57: OAuth response already handled, skipping.
+04/03/2025 04:58:05: OAuth response already handled, skipping.
+04/03/2025 05:44:36: Query URL: ?code=4%2F0AQSTgQHb-1v1qA2znsQD1gkPdKhBLdRo8XQ_4rJ1nVpCnde_Q9bXpnBXpq9Xi8XQyhJAmA&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=consent
+04/03/2025 05:44:36: Code URL: 4/0AQSTgQHb-1v1qA2znsQD1gkPdKhBLdRo8XQ_4rJ1nVpCnde_Q9bXpnBXpq9Xi8XQyhJAmA
+04/03/2025 05:44:38: Response Status Code: OK
+04/03/2025 05:44:40: Generated Password : faf7
+04/03/2025 05:44:40: Password : faf7

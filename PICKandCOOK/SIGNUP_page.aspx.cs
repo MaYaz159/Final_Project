@@ -255,7 +255,7 @@ namespace PICKandCOOK
             else
             {
                 String username, pass;
-
+                Session["password"] = TextBox2.Text;
                 username = TextBox1.Text;
                 pass = HashPassword(TextBox2.Text);
 

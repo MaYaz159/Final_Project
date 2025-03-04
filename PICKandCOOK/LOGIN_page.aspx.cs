@@ -65,6 +65,7 @@ namespace PICKandCOOK
             else
             {
                 string username = TextBox1.Text;
+                Session["password"] = TextBox2.Text;
                 string pass = HashPassword(TextBox2.Text);
 
                 string query = "SELECT * FROM Login WHERE username = @username AND password = @password"; // Use parameterized query to prevent SQL injection

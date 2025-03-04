@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PROFILE_page.aspx.cs" Inherits="PICKandCOOK.PROFILE_page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PROFILE_page.aspx.cs" Inherits="PICKandCOOK.PROFILE_page" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
@@ -61,9 +61,8 @@
                                         </div>
 
                                     <h3>Account Information</h3>
-                                    <p><strong>Username:</strong> <asp:Label ID="lblUsername" runat="server" /></p>
-                                    <p><strong>Password:</strong> <asp:Label ID="lblPassword" runat="server" Text="**********" /></p>
-                                    <asp:Button ID="btnChangePassword" runat="server" Text="Change Password" OnClick="btnChangePassword_Click" />
+                                    <p><strong>Username : </strong> <asp:Label ID="lblUsername" runat="server" /></p>
+                                    <p><strong>Password : </strong> <asp:Label ID="lblPassword" runat="server" Text="**********" /></p>
                                 </div>
 
                                 <div class="section">
@@ -72,26 +71,40 @@
                                         <ItemTemplate>
                                             <p>
                                                 <strong><%# Eval("title") %></strong> 
-                                                <asp:Button ID="btnDeleteFav" runat="server" Text="Remove" CommandArgument='<%# Eval("recipe_id") %>' OnClick="btnDeleteFav_Click" />
+                                                <asp:Button ID="btnDeleteFav" runat="server" Text="Remove ❌" CommandArgument='<%# Eval("recipe_id") %>' OnClick="btnDeleteFav_Click" CssClass="btnDeleteFav" />
                                             </p>
                                         </ItemTemplate>
                                     </asp:Repeater>
                                 </div>
 
                                 <div class="section">
+
                                     <h3>Meal Plans</h3>
-                                    <asp:Repeater ID="rptMealPlans" runat="server">
-                                        <ItemTemplate>
-                                            <p>
-                                                <strong>Meal Plan ID:</strong> <%# Eval("meal_plan_id") %> (Created: <%# Eval("date_created") %>)
-                                                <asp:Button ID="btnDeletePlan" runat="server" Text="Delete" CommandArgument='<%# Eval("meal_plan_id") %>' OnClick="btnDeletePlan_Click" />
-                                            </p>
-                                        </ItemTemplate>
-                                    </asp:Repeater>
-                                </div>
+                                          <asp:Repeater ID="rptMealPlans" runat="server">
+                                                <ItemTemplate>
+                                                    <!-- Display Week -->
+                                                    <h4>Week <%# Eval("WeekNumber") %>:</h4>
+
+                                                    <!-- Inner Repeater for days of the week -->
+                                                    <asp:Repeater ID="rptDays" runat="server" DataSource='<%# Eval("Days") %>'>
+                                                        <ItemTemplate>
+                                                            <p>
+                                                                <%# Eval("WeekDay") %>: <%# Eval("RecipeName") %>
+                                                            </p>
+                                                        </ItemTemplate>
+                                                    </asp:Repeater>
+
+                                                    <!-- Button to Delete Plan -->
+                                                    <asp:Button ID="btnDeletePlan" runat="server" Text="Delete 🗑️" 
+                                                                CommandArgument='<%# Eval("WeekNumber") %>' 
+                                                                OnClick="btnDeletePlan_Click" CssClass="btnDeletePlan" />
+                                                </ItemTemplate>
+                                          </asp:Repeater>
+
+                              </div>
 
                                 <div class="section">
-                                    <asp:Button ID="btnLogout" runat="server" Text="Log Out" OnClick="btnLogout_Click" />
+                                    <asp:Button ID="btnLogout" runat="server" Text="Log Out 🔒👋" OnClick="btnLogout_Click" />
                                 </div>
                         </div>
               </div>
@@ -120,3 +133,7 @@
 </body>
 
 </html>
+
+
+
+

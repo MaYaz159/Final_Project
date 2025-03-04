@@ -3,7 +3,7 @@ CREATE DATABASE MyWebsite
 GO
 
 USE MyWebsite;
-CREATE TABLE Login ( ID int primary key identity ( 1,1 ) , username varchar(100) not null , password varchar(100) not null , Profile_Picture VARBINARY(MAX) );
+CREATE TABLE Login ( username varchar(50) primary key not null , password varchar(100) not null , Profile_Picture VARBINARY(MAX) );
 
 GO
 
@@ -920,6 +920,11 @@ INSERT INTO DietaryRestrictions (restriction_title, recipe_id) VALUES
 ('Vegan', 49),
 ('Vegan', 50),
 ('Vegan', 51);
+
+GO
+
+use MyWebsite;
+select * from Login;
 
 GO
 

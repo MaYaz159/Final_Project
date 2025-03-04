@@ -367,7 +367,7 @@ ORDER BY meal_plan_id;
 GO
 
 use MyWebsite;
-CREATE TABLE NbrofMealPlans ( Plan_id int primary key identity(1,1), username varchar(50) not null);
+CREATE TABLE NbrofMealPlans ( Plan_id int primary key identity(1,1), username varchar(50) foreign key references Login(username) not null);
 
 GO
 
@@ -394,6 +394,7 @@ breakfast_recipe_id, lunch_recipe_id, dinner_recipe_id;
 
 GO
 
+use MyWebsite;
 select * from PlannerMeal;
 
 GO
@@ -443,12 +444,14 @@ select * from IngredientPrice;
 
 GO
 
+use MyWebsite;
 exec sp_help IngredientPrice;
 
 GO
 
+use MyWebsite;
 select sum(price) as Total_Price from IngredientPrice
-where name in ( 'Almond milk', 'Bacon', 'Chicken');
+where name in ( 'Almond milk', 'Bacon', 'Chicken' );
 
 GO
 
@@ -457,7 +460,150 @@ CREATE TABLE Delivery (del_id int primary key identity(1,1), username varchar(50
 
 GO
 
+use MyWebsite;
 select * from Delivery;
+
+GO
+
+use MyWebsite;
+select distinct title, image_url, meal_type_name, cuisine_name from TablesTogether;
+
+GO
+
+use MyWebsite;
+CREATE TABLE Favorites ( username varchar(50) foreign key references Login(username) not null, recipe_id int foreign key references Recipes(recipe_id), primary key (username, recipe_id) );
+
+GO
+
+use MyWebsite;
+select * from Favorites;
+
+GO
+
+use MyWebsite;
+delete from Favorites;
+drop table Favorites;
+
+GO
+
+CREATE OR ALTER VIEW PlannerMeal AS
+WITH MealWithWeekdays AS (
+    SELECT 
+        Plan_id, 
+        n.username,
+        meal_plan_id,
+        breakfast_recipe_id, 
+        lunch_recipe_id, 
+        dinner_recipe_id, 
+        dietary_restrictions,
+        date_created,
+        ROW_NUMBER() OVER (PARTITION BY Plan_id, n.username ORDER BY date_created) AS day_sequence
+    FROM 
+        NbrofMealPlans n
+    INNER JOIN 
+        MealPlans m ON n.username = m.username
+)
+, MealWithWeeks AS (
+    SELECT 
+        Plan_id,
+        username,
+        meal_plan_id,
+        breakfast_recipe_id, 
+        lunch_recipe_id, 
+        dinner_recipe_id, 
+        dietary_restrictions,
+        date_created,
+        day_sequence,
+        (day_sequence - 1) / 7 + 1 AS week_number,  -- Calculate week number based on day_sequence
+        (day_sequence - 1) % 7 + 1 AS weekday_sequence  -- Calculate the day of the week (1 for Monday, 7 for Sunday)
+    FROM 
+        MealWithWeekdays
+)
+SELECT 
+    Plan_id,
+    username,
+    meal_plan_id,
+    breakfast_recipe_id, 
+    lunch_recipe_id, 
+    dinner_recipe_id, 
+    dietary_restrictions,
+    date_created,
+    week_number,
+    CASE 
+        WHEN weekday_sequence = 1 THEN 'Monday'
+        WHEN weekday_sequence = 2 THEN 'Tuesday'
+        WHEN weekday_sequence = 3 THEN 'Wednesday'
+        WHEN weekday_sequence = 4 THEN 'Thursday'
+        WHEN weekday_sequence = 5 THEN 'Friday'
+        WHEN weekday_sequence = 6 THEN 'Saturday'
+        WHEN weekday_sequence = 7 THEN 'Sunday'
+    END AS week_day
+FROM 
+    MealWithWeeks m;
+
+GO
+
+select * from PlannerMeal
+order by username;
+
+GO
+
+CREATE or alter VIEW AllTables
+as
+SELECT 
+Plan_id, 
+username, 
+meal_plan_id, 
+breakfast_recipe_id, 
+lunch_recipe_id, 
+dinner_recipe_id, 
+dietary_restrictions, 
+date_created, 
+week_number, 
+week_day,
+CASE 
+WHEN week_day = 'Monday' THEN (SELECT title FROM Recipes WHERE recipe_id = breakfast_recipe_id)
+WHEN week_day = 'Tuesday' THEN (SELECT title FROM Recipes WHERE recipe_id = lunch_recipe_id)
+WHEN week_day = 'Wednesday' THEN (SELECT title FROM Recipes WHERE recipe_id = dinner_recipe_id)
+WHEN week_day = 'Thursday' THEN (SELECT title FROM Recipes WHERE recipe_id = breakfast_recipe_id)
+WHEN week_day = 'Friday' THEN (SELECT title FROM Recipes WHERE recipe_id = lunch_recipe_id)
+WHEN week_day = 'Saturday' THEN (SELECT title FROM Recipes WHERE recipe_id = dinner_recipe_id)
+WHEN week_day = 'Sunday' THEN (SELECT title FROM Recipes WHERE recipe_id = breakfast_recipe_id)
+END AS recipe_name
+FROM 
+PlannerMeal 
+with check option
+
+GO
+
+use MyWebsite
+select * from AllTables;
+
+GO
+
+select week_number, week_day, recipe_name from AllTables
+where username = 'malak'
+group by week_number, week_day,recipe_name;
+
+GO
+
+use MyWebsite;
+DELETE FROM Login;
+drop table Login;
+
+drop table Favorites;
+
+drop table NbrofMealPlans;
+
+GO
+
+select * from MealPlans;
+
+GO
+
+delete from MealPlans where username = 'malak' and meal_plan_id IN (select meal_plan_id from AllTables where week_number ='1'); 
+
+select * from Favorites;
 
 GO
 
