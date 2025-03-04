@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|c:\\users\\user\\onedrive\\desktop\\project\\pickandcook\\login_page.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|solutionrelative:login_page.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|c:\\users\\user\\onedrive\\desktop\\project\\pickandcook\\style\\style_loginpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|solutionrelative:style\\style_loginpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|c:\\users\\user\\onedrive\\desktop\\project\\pickandcook\\style\\style_profilepage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|solutionrelative:style\\style_profilepage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\profile_page.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|solutionrelative:profile_page.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\profile_page.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{438F923F-264E-4C5A-A437-57204BB2C6D7}|PICKandCOOK.csproj|solutionrelative:profile_page.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +51,72 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "style_profilepage.css",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\style\\style_profilepage.css",
+              "RelativeDocumentMoniker": "style\\style_profilepage.css",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\style\\style_profilepage.css",
+              "RelativeToolTip": "style\\style_profilepage.css",
+              "ViewState": "AgIAAAYBAAAAAAAAAAAkwO4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-03T22:43:24.177Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LOGIN_page.aspx",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\LOGIN_page.aspx",
+              "RelativeDocumentMoniker": "LOGIN_page.aspx",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\LOGIN_page.aspx",
+              "RelativeToolTip": "LOGIN_page.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-03-04T00:07:56.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "style_loginpage.css",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\style\\style_loginpage.css",
+              "RelativeDocumentMoniker": "style\\style_loginpage.css",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\style\\style_loginpage.css",
+              "RelativeToolTip": "style\\style_loginpage.css",
+              "ViewState": "AgIAALgAAAAAAAAAAAAAAMkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-04T00:07:17.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PROFILE_page.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\PROFILE_page.aspx.cs",
+              "RelativeDocumentMoniker": "PROFILE_page.aspx.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\PROFILE_page.aspx.cs",
+              "RelativeToolTip": "PROFILE_page.aspx.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAA9wIEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T22:44:27.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PROFILE_page.aspx",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\PROFILE_page.aspx",
+              "RelativeDocumentMoniker": "PROFILE_page.aspx",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Project\\PICKandCOOK\\PROFILE_page.aspx",
+              "RelativeToolTip": "PROFILE_page.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-03-03T22:43:38.37Z",
+              "EditorCaption": ""
             }
           ]
         }

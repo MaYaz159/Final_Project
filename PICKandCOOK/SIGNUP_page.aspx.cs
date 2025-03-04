@@ -14,6 +14,7 @@ using System.Net.Http;
 using System.Net;
 using System.Threading.Tasks;
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PICKandCOOK
 {
@@ -215,6 +216,10 @@ namespace PICKandCOOK
                                 insertCmd.ExecuteNonQuery();
                             }
                         }
+
+                        // Store username in session
+                        Session["Username"] = email;
+
                     }
                 }
             }
@@ -283,7 +288,12 @@ namespace PICKandCOOK
 
                             if (rowsAffected > 0)
                             {
-                                Response.Redirect("LOGIN_page.aspx"); // Redirect to the login page or dashboard.
+
+                                // Store username in session
+                                Session["Username"] = username;
+
+                                Response.Redirect("HOME_page.aspx"); // Redirect to the login page or dashboard.
+
                             }
                         }
                     }

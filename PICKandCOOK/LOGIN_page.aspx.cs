@@ -79,7 +79,12 @@ namespace PICKandCOOK
 
                     if (dtable.Rows.Count > 0)
                     {
+
+                        // Store username in session
+                        Session["Username"] = username;
+
                         Response.Redirect("HOME_page.aspx"); // Redirect to the home page or dashboard.
+
                     }
                     else
                     {
@@ -90,6 +95,7 @@ namespace PICKandCOOK
                         lblErrorMessage.Visible = true; // Show the error message label.
                     }
                 }
+
             }
         }
 

@@ -716,7 +716,8 @@ SELECT title, meal_type_name FROM CusininesMealsRecipes;
 GO
 
 use MyWebsite;
-select title from Recipes;
+select title from Recipes
+order by recipe_id;
 
 GO
 
@@ -743,7 +744,7 @@ DROP TABLE MealTypes;
 GO
 
 use MyWebsite;
-CREATE TABLE Messages ( firstName varchar(20), lastName varchar(20), email varchar(100), message Nvarchar(max) );
+CREATE TABLE Messages ( ID int primary key identity(1,1) not null,  firstName varchar(20), lastName varchar(20), email varchar(100), message Nvarchar(max) );
 
 GO
 
@@ -752,7 +753,173 @@ SELECT * from Messages;
 
 GO
 
+use MyWebsite;
 Delete from Messages;
 Drop table Messages;
 
+GO
+
+exec sp_help 'Messages';
+
+GO
+
+use MyWebsite;
+CREATE TABLE MealPlans (
+    meal_plan_id INT PRIMARY KEY IDENTITY(1,1),
+    breakfast_recipe_id INT,
+    lunch_recipe_id INT,
+    dinner_recipe_id INT,
+    dietary_restrictions NVARCHAR(MAX),
+    date_created DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (breakfast_recipe_id) REFERENCES Recipes(recipe_id),
+    FOREIGN KEY (lunch_recipe_id) REFERENCES Recipes(recipe_id),
+    FOREIGN KEY (dinner_recipe_id) REFERENCES Recipes(recipe_id)
+);
+
+GO
+
+use MyWebsite;
+Select * from MealPlans;
+
+GO
+
+use MyWebsite;
+-- Breakfast Recipes
+INSERT INTO Recipes (title, instructions, cooking_time, servings, cuisine_id, meal_type_id, image_url, nutrition_info) 
+VALUES 
+('Vegan Oatmeal with Berries', 'Boil almond milk in a pot. Add oats and cook for 5 minutes. Stir in maple syrup and cinnamon. Top with fresh berries and nuts.', 10, 2, 9, 1, 
+'/Recipes/Vegan Oatmeal with Berries.jpeg', 'Calories: 250'),
+
+('Tofu Scramble with Vegetables', 'Heat oil in a pan and sauté onions and bell peppers. Crumble tofu and add turmeric, salt, and pepper. Cook for 5 minutes, stirring frequently. Serve hot.', 15, 2, 22, 1, 
+'/Recipes/Tofu Scramble with Vegetables.jpeg', 'Calories: 220'),
+
+('Vegan Pancakes with Maple Syrup', 'Mix flour, baking powder, and almond milk in a bowl. Add mashed banana for sweetness. Heat a pan and cook pancakes on both sides. Serve with maple syrup and fresh fruit.', 20, 3, 9, 1, 
+'/Recipes/Vegan Pancakes with Maple Syrup.jpeg', 'Calories: 280');
+
+-- Lunch Recipes
+INSERT INTO Recipes (title, instructions, cooking_time, servings, cuisine_id, meal_type_id, image_url, nutrition_info) 
+VALUES 
+('Quinoa and Chickpea Salad', 'Cook quinoa according to package instructions. Mix with chickpeas, diced cucumber, tomatoes, and parsley. Drizzle with olive oil and lemon juice. Serve chilled.', 20, 2, 16, 2, 
+'/Recipes/Quinoa and Chickpea Salad.jpeg', 'Calories: 300'),
+
+('Vegan Buddha Bowl', 'Roast sweet potatoes in the oven at 400°F for 20 minutes. Sauté kale with garlic. Cook quinoa and assemble with chickpeas, avocado, and tahini dressing.', 25, 2, 9, 2, 
+'/Recipes/Vegan Buddha Bowl.jpeg', 'Calories: 450'),
+
+('Lentil Soup', 'Sauté onions, garlic, and carrots in olive oil. Add lentils, vegetable broth, and spices. Simmer for 30 minutes until lentils are soft. Blend for a creamy texture.', 35, 4, 22, 2, 
+'/Recipes/Lentil Soup.jpeg', 'Calories: 320');
+
+-- Dinner Recipes
+INSERT INTO Recipes (title, instructions, cooking_time, servings, cuisine_id, meal_type_id, image_url, nutrition_info) 
+VALUES 
+('Stuffed Bell Peppers', 'Preheat oven to 375°F. Cook rice and mix with black beans, tomatoes, and spices. Stuff bell peppers and bake for 25 minutes.', 40, 2, 2, 3, 
+'/Recipes/Stuffed Bell Peppers.jpeg', 'Calories: 350'),
+
+('Vegan Stir-Fried Tofu with Broccoli', 'Heat oil in a wok and add tofu cubes. Stir-fry with garlic, soy sauce, and broccoli. Serve over steamed rice or quinoa.', 20, 2, 3, 3, 
+'/Recipes/Vegan Stir-Fried Tofu with Broccoli.jpeg', 'Calories: 380'),
+
+('Spaghetti with Vegan Pesto', 'Cook spaghetti according to package instructions. Blend basil, garlic, olive oil, nuts, and nutritional yeast for pesto. Toss spaghetti with pesto and serve.', 25, 2, 1, 3, 
+'/Recipes/Spaghetti with Vegan Pesto.jpeg', 'Calories: 420');
+
+GO
+
+INSERT INTO Ingredients (name, quantity, measurement_unit, recipe_id) 
+VALUES 
+('Oats', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Oatmeal with Berries')),
+('Almond Milk', 1.5, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Oatmeal with Berries')),
+('Maple Syrup', 1, 'tbsp', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Oatmeal with Berries')),
+('Cinnamon', 0.5, 'tsp', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Oatmeal with Berries')),
+('Mixed Berries', 0.5, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Oatmeal with Berries')),
+('Chopped Nuts', 2, 'tbsp', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Oatmeal with Berries'));
+
+GO
+
+-- Ingredients for Tofu Scramble with Vegetables
+INSERT INTO Ingredients (name, quantity, measurement_unit, recipe_id) VALUES
+('Tofu', 1, 'block', (SELECT recipe_id FROM Recipes WHERE title = 'Tofu Scramble with Vegetables')),
+('Olive Oil', 1, 'tbsp', (SELECT recipe_id FROM Recipes WHERE title = 'Tofu Scramble with Vegetables')),
+('Onion', 0.5, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Tofu Scramble with Vegetables')),
+('Bell Pepper', 0.5, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Tofu Scramble with Vegetables')),
+('Turmeric', 0.5, 'tsp', (SELECT recipe_id FROM Recipes WHERE title = 'Tofu Scramble with Vegetables')),
+('Salt', 0.25, 'tsp', (SELECT recipe_id FROM Recipes WHERE title = 'Tofu Scramble with Vegetables')),
+('Black Pepper', 0.25, 'tsp', (SELECT recipe_id FROM Recipes WHERE title = 'Tofu Scramble with Vegetables'));
+
+-- Ingredients for Vegan Pancakes with Maple Syrup
+INSERT INTO Ingredients (name, quantity, measurement_unit, recipe_id) VALUES
+('Flour', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Pancakes with Maple Syrup')),
+('Baking Powder', 2, 'tsp', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Pancakes with Maple Syrup')),
+('Almond Milk', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Pancakes with Maple Syrup')),
+('Banana', 1, 'mashed', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Pancakes with Maple Syrup')),
+('Maple Syrup', 2, 'tbsp', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Pancakes with Maple Syrup'));
+
+-- Ingredients for Quinoa and Chickpea Salad
+INSERT INTO Ingredients (name, quantity, measurement_unit, recipe_id) VALUES
+('Quinoa', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Quinoa and Chickpea Salad')),
+('Chickpeas', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Quinoa and Chickpea Salad')),
+('Cucumber', 0.5, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Quinoa and Chickpea Salad')),
+('Tomatoes', 0.5, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Quinoa and Chickpea Salad')),
+('Parsley', 2, 'tbsp', (SELECT recipe_id FROM Recipes WHERE title = 'Quinoa and Chickpea Salad')),
+('Olive Oil', 1, 'tbsp', (SELECT recipe_id FROM Recipes WHERE title = 'Quinoa and Chickpea Salad')),
+('Lemon Juice', 1, 'tbsp', (SELECT recipe_id FROM Recipes WHERE title = 'Quinoa and Chickpea Salad'));
+
+-- Ingredients for Vegan Buddha Bowl
+INSERT INTO Ingredients (name, quantity, measurement_unit, recipe_id) VALUES
+('Sweet Potatoes', 1, 'medium', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Buddha Bowl')),
+('Kale', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Buddha Bowl')),
+('Quinoa', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Buddha Bowl')),
+('Chickpeas', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Buddha Bowl')),
+('Avocado', 1, 'sliced', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Buddha Bowl')),
+('Tahini', 2, 'tbsp', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Buddha Bowl'));
+
+-- Ingredients for Lentil Soup
+INSERT INTO Ingredients (name, quantity, measurement_unit, recipe_id) VALUES
+('Olive Oil', 1, 'tbsp', (SELECT recipe_id FROM Recipes WHERE title = 'Lentil Soup')),
+('Onion', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Lentil Soup')),
+('Garlic', 2, 'cloves', (SELECT recipe_id FROM Recipes WHERE title = 'Lentil Soup')),
+('Carrots', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Lentil Soup')),
+('Lentils', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Lentil Soup')),
+('Vegetable Broth', 4, 'cups', (SELECT recipe_id FROM Recipes WHERE title = 'Lentil Soup')),
+('Salt', 0.5, 'tsp', (SELECT recipe_id FROM Recipes WHERE title = 'Lentil Soup')),
+('Pepper', 0.5, 'tsp', (SELECT recipe_id FROM Recipes WHERE title = 'Lentil Soup'));
+
+-- Ingredients for Stuffed Bell Peppers
+INSERT INTO Ingredients (name, quantity, measurement_unit, recipe_id) VALUES
+('Bell Peppers', 2, 'large', (SELECT recipe_id FROM Recipes WHERE title = 'Stuffed Bell Peppers')),
+('Rice', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Stuffed Bell Peppers')),
+('Black Beans', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Stuffed Bell Peppers')),
+('Tomatoes', 0.5, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Stuffed Bell Peppers')),
+('Spices', 1, 'tsp', (SELECT recipe_id FROM Recipes WHERE title = 'Stuffed Bell Peppers'));
+
+-- Ingredients for Vegan Stir-Fried Tofu with Broccoli
+INSERT INTO Ingredients (name, quantity, measurement_unit, recipe_id) VALUES
+('Tofu', 1, 'block', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Stir-Fried Tofu with Broccoli')),
+('Olive Oil', 1, 'tbsp', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Stir-Fried Tofu with Broccoli')),
+('Garlic', 2, 'cloves', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Stir-Fried Tofu with Broccoli')),
+('Soy Sauce', 2, 'tbsp', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Stir-Fried Tofu with Broccoli')),
+('Broccoli', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Stir-Fried Tofu with Broccoli')),
+('Rice', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Vegan Stir-Fried Tofu with Broccoli'));
+
+-- Ingredients for Spaghetti with Vegan Pesto
+INSERT INTO Ingredients (name, quantity, measurement_unit, recipe_id) VALUES
+('Spaghetti', 2, 'cups', (SELECT recipe_id FROM Recipes WHERE title = 'Spaghetti with Vegan Pesto')),
+('Basil', 1, 'cup', (SELECT recipe_id FROM Recipes WHERE title = 'Spaghetti with Vegan Pesto')),
+('Garlic', 2, 'cloves', (SELECT recipe_id FROM Recipes WHERE title = 'Spaghetti with Vegan Pesto')),
+('Olive Oil', 2, 'tbsp', (SELECT recipe_id FROM Recipes WHERE title = 'Spaghetti with Vegan Pesto')),
+('Nuts', 2, 'tbsp', (SELECT recipe_id FROM Recipes WHERE title = 'Spaghetti with Vegan Pesto')),
+('Nutritional Yeast', 2, 'tbsp', (SELECT recipe_id FROM Recipes WHERE title = 'Spaghetti with Vegan Pesto'));
+
+GO
+
+use MyWebsite;
+INSERT INTO DietaryRestrictions (restriction_title, recipe_id) VALUES
+('Vegan', 43),
+('Vegan', 44),
+('Vegan', 45),
+('Vegan', 46),
+('Vegan', 47),
+('Vegan', 48),
+('Vegan', 49),
+('Vegan', 50),
+('Vegan', 51);
+
+GO
 

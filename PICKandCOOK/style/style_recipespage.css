@@ -144,7 +144,7 @@
 
 .list_items {
     float: right;
-    width: 66%;
+    width: 67%;
     height: 100%;
     display: flex; /* Enable Flex_box */
     justify-content: flex-start; /* Align children to the left */

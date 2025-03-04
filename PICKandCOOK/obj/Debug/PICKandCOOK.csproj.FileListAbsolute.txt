@@ -232,3 +232,4 @@ C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\System.Security.Principal
 C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\System.Text.Encodings.Web.xml
 C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\System.ValueTuple.xml
+C:\Users\user\OneDrive\Desktop\Project\PickandCook\bin\QRCoder.dll

@@ -66,6 +66,7 @@ namespace PICKandCOOK
 
                 // Add the default "Select Meal Type" item as the first item
                 DropDownList1.Items.Insert(0, new ListItem("Select Meal Type", ""));
+
             }
 
         }
@@ -90,8 +91,9 @@ namespace PICKandCOOK
                 DropDownList2.DataValueField = "cuisine_name"; // Column to use as value
                 DropDownList2.DataBind();
 
-                // Add the default "Select Meal Type" item as the first item
+                // Add the default "Select Cuisine Name" item as the first item
                 DropDownList2.Items.Insert(0, new ListItem("Select Cuisine Name", ""));
+
             }
 
         }

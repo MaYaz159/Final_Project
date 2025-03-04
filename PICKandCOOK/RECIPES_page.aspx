@@ -28,10 +28,10 @@
                     <ul class="items">
                         <li><a href="HOME_page.aspx">Home</a></li>
                         <li><a href="RECIPES_page.aspx">Recipes</a></li>
-                        <li><a href="planner.html">Planner</a></li>
-                        <li><a href="services.html">Pantry</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="favorites.html">Favorites</a></li>
+                        <li><a href="PLANNER_page.aspx">Planner</a></li>
+                        <li><a href="SHOP_page.aspx">Shop</a></li>
+                        <li><a href="FAVORITES_page.aspx">Favorites</a></li>
+                        <li><a href="PROFILE_page.aspx"> Account </a></li>
                         <li><a href="LOGIN_page.aspx">Log In</a></li>
                     </ul>
                     <div class="social_buttons">

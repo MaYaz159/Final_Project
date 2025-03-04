@@ -1,0 +1,445 @@
+﻿html, body {
+    margin: 0; /* Remove default margin */
+    height: 100%; /* Ensure the body takes full height */
+}
+
+/* The first value corresponds to vertical padding (top and bottom). */
+/* The second value corresponds to horizontal padding (left and right). */
+
+#homepage {
+    width: 100%;
+    height: 10000px;
+    position: relative; /* Needed for positioned child elements */
+    display: flex;
+    flex-direction: column; /* Stack header and content vertically */
+}
+
+* {
+    user-select: none;
+}
+
+@font-face {
+    font-family: 'font1';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/BlueberrypiepersonaluseBold-x3AZV.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'font2';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/MercusuarBold-PKa6Z.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'font3';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font4';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/Roca Bold Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font5';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/LeagueSpartan-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'font6';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font7';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/Ubuntu-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font8';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/HammersmithOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font9';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/HKGrotesk-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'font10';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/Retro Floral.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font11';
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/PineWords-Regular.ttf') format('truetype');
+}
+
+#header {
+    position: sticky;
+    top: 0;
+    padding: 10px 0; /* Adjust the padding as needed */
+    z-index: 1000; /* Ensure the header stays on top of other content */
+    width: 100%; /* Try using view_port width */
+    height: 12vh;
+    background-color: rgb(211, 84, 0, 0.8);
+    /* box-shadow: 0 0 5px rgb_a(0, 0, 0, 0.1); */ /* Optional: adds a shadow for a little depth */
+}
+
+.logoandimage {
+    float: left;
+    width: 30%;
+    display: flex; /* Enable Flex_box */
+    justify-content: flex-start; /* Align children to the left */
+    height: 100%;
+}
+
+.logo_image {
+    float: left;
+    box-sizing: border-box;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center items */
+}
+
+#imglogo {
+    width: 75px;
+    height: 75px;
+}
+
+.title {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center items */
+}
+
+.font-p {
+    font-family: font1;
+    font-size: 35px;
+}
+
+.list_items {
+    float: right;
+    width: 67%;
+    height: 100%;
+    display: flex; /* Enable Flex_box */
+    justify-content: flex-start; /* Align children to the left */
+}
+
+.items {
+    list-style-type: none;
+    display: flex;
+    padding-top: 0.8%;
+    box-sizing: border-box;
+    padding-left: 3.5%;
+}
+
+li {
+    display: inline-block; /* Make items line up horizontally */
+    margin-right: 25px; /* Add space between items */
+    font-family: font2;
+    font-size: 26px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 25px; /* Add space */
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 35px;
+    border: none; /* Removes the border */
+    border-radius: 25px; /* This makes the button have slightly rounded edges */
+    display: inline-block; /* Make the anchor tag behave like a block element */
+    text-align: center; /* Center the text */
+    line-height: 33px; /* Vertically center the text */
+}
+
+    .button:hover {
+        background-color: #F4E1D1;
+        color: black;
+    }
+
+.social_buttons {
+    margin-top: 2.1%;
+}
+
+.s {
+    width: fit-content;
+    padding-top: 2.3%;
+    box-sizing: border-box;
+}
+
+.items li {
+    position: relative;
+}
+
+    /* The line that will appear and disappear */
+    .items li::after {
+        content: ''; /* Empty content */
+        display: block; /* Make the line a block element */
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 0;
+        height: 1px; /* Adjust the line thickness */
+        background-color: black; /* Adjust the color */
+        transition: width 0.3s ease-out; /* Makes the line appear slowly */
+        margin: 0 auto; /* Center the line horizontally */
+    }
+
+    /* When hovering over the list item, make the line appear from left to right */
+    .items li:hover::after {
+        width: 102%; /* Makes the line stretch to full width */
+    }
+
+    /* Optional: Slight fade effect when moving the cursor away */
+    .items li::after {
+        opacity: 0; /* Line starts invisible */
+        transition: opacity 0.5s ease-out, width 0.5s ease-out;
+    }
+
+    .items li:hover::after {
+        opacity: 1; /* Makes the line fully visible when hovering */
+    }
+
+
+
+
+.container {
+    width: 100%;
+    flex-grow: 1; /* Make content take remaining space */
+    height: 3780vh; /* Ensure content fills the remaining space */
+    overflow: hidden; /* Prevents overflow of child elements */
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #F4E1D1;
+    justify-content: center;
+}
+
+
+
+.floating-message {
+    position: fixed;
+    font-family: font10;
+    top: 15px;
+    left: 35%;
+    background-color: #F4E1D1;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    font-size: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+    .floating-message.error {
+        background-color: #f44336;
+    }
+
+
+
+
+
+
+
+
+/* General GridView Styling */
+#RecipeGridView {
+    width: 85%; /* Increased width */
+    border-collapse: collapse;
+    font-family: font6;
+    margin: 40px auto; /* Center the table */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+    /* Header Styling */
+    #RecipeGridView th {
+        background-color: rgb(211, 84, 0, 0.8); /* Orange Color */
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 18px;
+        border: 1px solid black;
+    }
+
+    /* Row Styling */
+    #RecipeGridView td {
+        padding: 15px; /* Increased padding for larger rows */
+        border-bottom: 1px solid black;
+        vertical-align: middle;
+    }
+
+    /* Alternate Row Colors */
+    #RecipeGridView tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    #RecipeGridView tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+
+    /* Hover Effect */
+    #RecipeGridView tr:hover {
+        background-color: #f1f1f1;
+        cursor: pointer;
+    }
+
+    /* Button Styling */
+    #RecipeGridView .aspNet-AddToFavorites {
+        background-color: rgb(255, 0, 0, 0.5); /* Red color for the button */
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        #RecipeGridView .aspNet-AddToFavorites:hover {
+            background-color: red; /* Darker red on hover */
+        }
+
+    /* Image Styling */
+    #RecipeGridView img {
+        width: 300px; /* Larger image */
+        height: 400px; /* Larger image */
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    }
+
+
+
+    
+#big {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh; /* Ensure content fills the remaining space */
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    overflow: hidden; /* Prevents overflow of child elements */
+}
+
+.custom-footer {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    overflow: hidden; /* Prevents overflow of child elements */
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+.name {
+    display: flex;
+    align-items: start;
+}
+
+.footer-left {
+    width: 40%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    display: flex;
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    justify-content: center; /* Align horizontally */
+    align-items: flex-start; /* Align vertically */
+}
+
+.footer-logo {
+    width: 90px;
+    height: 90px;
+}
+
+.brand-name {
+    font-family: font1;
+    font-size: 40px;
+    display: flex;
+    width: 300px;
+    height: 90px;
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    justify-content: center; /* Align horizontally */
+    align-items: center; /* Align vertically */
+    margin-top: -5px;
+}
+
+.credits {
+    font-family: font10;
+    font-size: 20px;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+.footer-right {
+    width: 60%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    display: flex;
+    position: relative; /* Ensure positioned elements inside can be positioned relative to this */
+    justify-content: center; /* Align horizontally */
+    align-items: flex-end; /* Align vertically */
+    margin-right: 20px;
+}
+
+.contact-info p {
+    margin: 20px 0;
+    font-family: font11; /* Ensures consistency */
+}
+
+.icon-location::before {
+    content: "📍";
+    font-style: normal; /* Prevents italic effect */
+    font-family: font11; /* Ensures consistency */
+}
+
+.icon-phone::before {
+    content: "📞";
+    font-style: normal; /* Prevents italic effect */
+    font-family: font11; /* Ensures consistency */
+}
+
+.icon-email::before {
+    content: "✉️";
+    font-style: normal; /* Prevents italic effect */
+    font-family: font11; /* Ensures consistency */
+}

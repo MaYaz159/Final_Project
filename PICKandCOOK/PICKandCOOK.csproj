@@ -266,6 +266,11 @@
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.6.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.6.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
     <Reference Include="SoundTouch.Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=fd94608088498f78, processorArchitecture=MSIL">
       <HintPath>packages\SoundTouch.Net.2.3.2\lib\net461\SoundTouch.Net.dll</HintPath>
     </Reference>
@@ -459,6 +464,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -467,12 +473,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CONTACT_page.aspx" />
+    <Content Include="FAVORITES_page.aspx" />
     <Content Include="HOME.html" />
     <Content Include="HOME_page.aspx" />
+    <Content Include="img\bg.png" />
+    <Content Include="img\bg2.png" />
+    <Content Include="img\bg3.png" />
+    <Content Include="img\bg4.png" />
+    <Content Include="img\bg5.png" />
+    <Content Include="img\bg6.png" />
+    <Content Include="img\bi.svg" />
+    <Content Include="img\default-profile.png" />
     <Content Include="img\eye.png" />
+    <Content Include="img\ff.png" />
     <Content Include="img\Google logo.png" />
     <Content Include="img\hidden.png" />
-    <Content Include="img\img1.png" />
     <Content Include="img\img2.png" />
     <Content Include="img\img3.png" />
     <Content Include="img\img4.png" />
@@ -480,25 +495,22 @@
     <Content Include="img\img6.png" />
     <Content Include="img\img7.png" />
     <Content Include="img\img8.png" />
-    <Content Include="img\recipe.png" />
-    <Content Include="LOGIN_page.aspx" />
-    <Content Include="img\bg.png" />
-    <Content Include="img\bg2.png" />
-    <Content Include="img\bg3.png" />
-    <Content Include="img\bg4.png" />
-    <Content Include="img\bg5.png" />
-    <Content Include="img\bg6.png" />
-    <Content Include="img\bg7.png" />
-    <Content Include="img\bi.svg" />
-    <Content Include="img\ff.png" />
     <Content Include="img\logo.ico" />
+    <Content Include="img\meal.png" />
+    <Content Include="img\meal2.png" />
     <Content Include="img\ns.png" />
+    <Content Include="img\qr_img 2.png" />
+    <Content Include="img\qr_img.png" />
+    <Content Include="img\recipe.png" />
     <Content Include="img\s.png" />
     <Content Include="img\t.png" />
+    <Content Include="LOGIN_page.aspx" />
     <Content Include="logs\Log1.txt" />
     <Content Include="logs\Log2.txt" />
     <Content Include="logs\Log3.txt" />
     <Content Include="logs\Log4.txt" />
+    <Content Include="PLANNER_page.aspx" />
+    <Content Include="PROFILE_page.aspx" />
     <Content Include="Recipes\Adobo.jpeg" />
     <Content Include="Recipes\Avocado Toast.jpeg" />
     <Content Include="Recipes\Baklava.jpeg" />
@@ -530,7 +542,6 @@
     <Content Include="Recipes\Pad thai.jpeg" />
     <Content Include="Recipes\Pancakes.jpeg" />
     <Content Include="Recipes\Pasta Primavera.jpeg" />
-    <Content Include="Recipes\Random\bgrecipes.png" />
     <Content Include="Recipes\Ratatouille.jpeg" />
     <Content Include="Recipes\Roasted Chickpeas.jpeg" />
     <Content Include="Recipes\Sauerbraten.jpeg" />
@@ -543,12 +554,17 @@
     <Content Include="Recipes\Sushi Rolls.jpeg" />
     <Content Include="Recipes\Vegetable Stir-Fry.jpeg" />
     <Content Include="RECIPES_page.aspx" />
+    <Content Include="SHOP_page.aspx" />
     <Content Include="SIGNUP_page.aspx" />
     <Content Include="style\HOME.css" />
     <Content Include="style\style_contactpage.css" />
+    <Content Include="style\style_favoritespage.css" />
     <Content Include="style\style_homepage.css" />
     <Content Include="style\style_loginpage.css" />
+    <Content Include="style\style_plannerpage.css" />
+    <Content Include="style\style_profilepage.css" />
     <Content Include="style\style_recipespage.css" />
+    <Content Include="style\style_shoppage.css" />
     <Content Include="style\style_signuppage.css" />
     <Content Include="videos\audio.mp3" />
     <Content Include="videos\bg.mp4" />
@@ -567,6 +583,13 @@
     <Compile Include="CONTACT_page.aspx.designer.cs">
       <DependentUpon>CONTACT_page.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FAVORITES_page.aspx.cs">
+      <DependentUpon>FAVORITES_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAVORITES_page.aspx.designer.cs">
+      <DependentUpon>FAVORITES_page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HOME_page.aspx.cs">
       <DependentUpon>HOME_page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -581,6 +604,20 @@
     <Compile Include="LOGIN_page.aspx.designer.cs">
       <DependentUpon>LOGIN_page.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PLANNER_page.aspx.cs">
+      <DependentUpon>PLANNER_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PLANNER_page.aspx.designer.cs">
+      <DependentUpon>PLANNER_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PROFILE_page.aspx.cs">
+      <DependentUpon>PROFILE_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PROFILE_page.aspx.designer.cs">
+      <DependentUpon>PROFILE_page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RECIPES_page.aspx.cs">
       <DependentUpon>RECIPES_page.aspx</DependentUpon>
@@ -588,6 +625,13 @@
     </Compile>
     <Compile Include="RECIPES_page.aspx.designer.cs">
       <DependentUpon>RECIPES_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SHOP_page.aspx.cs">
+      <DependentUpon>SHOP_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SHOP_page.aspx.designer.cs">
+      <DependentUpon>SHOP_page.aspx</DependentUpon>
     </Compile>
     <Compile Include="SIGNUP_page.aspx.cs">
       <DependentUpon>SIGNUP_page.aspx</DependentUpon>
